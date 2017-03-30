@@ -1,0 +1,541 @@
+/*======= Styles for content select (iframe) =======*/
+
+.mfepContentSelectMain {
+	background: transparent;
+	height: 480px;
+	width: 100%;
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	cursor: pointer;
+}
+
+.mfepContentSelectMain:hover ,
+.mfepContentSelectMain.elementActive {
+	border: 4px solid #03A9F4;
+	box-shadow: rgba(0,0,0,0.52) 0px 0px 18px 1px;
+	background: url("mfep_bg.png");
+}
+
+.mfepContentWithVariants {
+	height: 235px;
+	position: absolute;
+	top: -1px;
+	left: -2px;
+	width: 480px;
+	border: 2px dashed #03A9F4;
+	cursor: pointer;
+}
+
+.mfepContentWithVariants:hover,
+.mfepContentWithVariants.elementActive {
+	border: 4px solid #03A9F4;
+	box-shadow: rgba(0,0,0,0.52) 0px 0px 18px 1px;
+	top: -4px;
+	left: -4px;
+	background: url("mfep_bg.png");
+}
+
+
+
+/*======= Rght click menus (iframe) =======*/
+
+
+.custom-menu {
+	display: none;
+	min-width: 140px;
+	width: 150px;
+	z-index: 99999;
+	position: absolute;
+	overflow: hidden;
+	border: 1px solid #CCC;
+	white-space: nowrap;
+	font-family: 'Roboto', sans-serif;
+	background: #FFF;
+	color: #333;
+	border-radius: 2px;
+	/*padding-bottom:4px;*/
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.custom-menu li {
+	padding: 16px 24px;
+	cursor: pointer;
+	list-style: none;
+}
+
+.custom-menu li:first-child {
+	padding: 0;
+	height: 51px;
+}
+
+.variantsNav i {
+	width: 50%;
+	height: 51px;
+	box-sizing: border-box;
+	text-align: center;
+	padding-top: 14px;
+	border-bottom: 1px solid #eee;
+}
+
+.variantsNav i:hover {
+	background: #fafafa
+}
+
+.variantsNav i:first-child {
+	border-right: 1px solid #eee;
+}
+
+.custom-menu li:not(:first-child):hover,
+.newVariantMenu li:hover {
+	background-color: #fafafa;
+}
+
+
+
+/*======= New variant/Edit variant modal (iframe) =======*/
+
+
+.newVariantModalMain {
+	width: 960px;
+	height: 572px;
+	max-height: 100%;
+	background: #ffffff;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	-webkit-box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+	border-radius: 2px;
+	z-index: 999;
+	font-family: 'Roboto', sans-serif;
+}
+
+.newVarModalOverlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 99999;
+}
+
+
+/* Modal header */
+
+.varModalHeaderMain {
+	background: white;
+	height: 52px;
+	line-height: 52px;
+	padding: 0 24px;
+	font-size: 18px;
+	border-bottom: 1px solid #eee;
+	box-sizing: border-box;
+	letter-spacing: normal;
+	color: #333;
+}
+
+.varModalHeaderMain i:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.varModalHeaderMain #varNameEditable {
+	height: 52px;
+	padding: 0;
+	width: auto;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	background: none;
+	color: #333;
+}
+
+.varModalHeaderMain i {
+	vertical-align: middle;
+	margin-left: 12px;
+	font-size: 18px;
+	padding: 4px;
+	border-radius: 20px;
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.4);
+	-webkit-transition: background 150ms ease-in-out;
+	-moz-transition: background 150ms ease-in-out;
+	-ms-transition: background 150ms ease-in-out;
+	-o-transition: background 150ms ease-in-out;
+	transition: background 150ms ease-in-out;
+}
+
+.varModalHeaderMain i.mfepHelpIcoModal {
+	float: right;
+	margin-top: 12px;
+	margin-right: -6px;
+	font-size: 20px;
+}
+
+
+/* tabs */
+
+.mfEpTabs * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.mfEpTabs {
+	width: 100%;  
+	float: none;
+	list-style: none;
+	position: relative;
+	margin: 0;
+}
+
+.mfEpTabs li {
+	float: left;
+	display: block;
+	width: calc(100% / 4); /* Change depending on number of tabs */
+}
+
+.mfEpTabs input[type="radio"] {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+}
+
+.mfEpTabs label {
+	display: block;
+	height: 48px;
+	line-height: 46px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	background: transparent;
+	color: rgba(55, 71, 79, 0.64);
+	cursor: pointer;
+	position: relative;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+}
+
+.mfEpTabs .tab-content {
+	z-index: 2;
+	display: none;
+	overflow: hidden;
+	width: 100%;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	background: #ffffff;
+	min-height: calc(100% - 52px);
+	color: #37474f;
+}
+
+.mfEpTabs [id^="tab"]:checked + label {
+	border-bottom: 3px solid #FF9800;
+	color: #37474f;
+}
+
+.mfEpTabs [id^="tab"]:checked ~ [id^="tab-content"] {
+	display: block;
+}
+
+
+/* Modal footer */
+
+.newVarModalFooter {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 52px;
+	border-top: 1px solid #eee;
+	text-align: right;
+}
+
+.cancelVarModalBtn,
+.saveVarModalBtn {
+	color: #FF9800;
+	display: inline-block;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 24px;
+	margin-top: 8px;
+	margin-right: 8px;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.cancelVarModalBtn {
+	color: rgba(0, 0, 0, 0.84);
+}
+
+.newVarModalFooter .cancelVarModalBtn:hover,
+.newVarModalFooter .saveVarModalBtn:hover {
+	cursor: pointer;
+	background: #fafafa;
+}
+
+
+/* Code editor tabs */
+
+#editorHtml,
+#editorCss,
+#editorJs {
+	height: 419px;
+}
+
+.ace-chrome .ace_storage, .ace-chrome .ace_keyword, .ace-chrome .ace_meta.ace_tag {
+	color: #9C27B0 !important;
+}
+
+.ace-chrome .ace_entity.ace_name.ace_function {
+	color: #3F51B5 !important;
+}
+
+.ace-chrome .ace_variable.ace_parameter {
+	color: #00BCD4 !important;
+}
+
+.ace-chrome .ace_constant.ace_numeric {
+	color: #E91E63 !important;
+}
+
+.ace-chrome .ace_support.ace_constant {
+	color: #03A9F4 !important;
+}
+
+.ace-chrome .ace_string {
+	color: #3F51B5 !important;
+}
+
+.ace-chrome .ace_constant.ace_language {
+	color: #00BCD4 !important;
+}
+
+.ace-chrome .ace_comment {
+	color: #BDBDBD !important;
+}
+
+.ace-chrome .ace_keyword.ace_operator {
+	color: #687687 !important;
+}
+
+.ace-chrome .ace_entity.ace_other.ace_attribute-name {
+	color: #03A9F4 !important;
+}
+
+.ace-chrome .ace_print-margin {
+	width: 0 !important;
+	border-right: 1px dashed #e8e8e8 !important;
+	background: transparent !important;
+}
+
+
+/* Resources Tab */
+
+.resourcesTabContainer {
+	height: 100%;
+	text-align: center;
+}
+
+.resourcesTabContainer .resTabEmptyText {
+	margin-top: 16%;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.4);
+	font-weight: 500;
+}
+
+.resourcesTabContainer .resUploadBtn {
+	background: #03A9F4;
+	color: #fff;
+	display: inline-block;
+	margin-top: 16px;
+	padding: 0 16px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+	margin-bottom: 10px;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.resourcesTabContainer .resUploadBtn:hover {
+	background: #29B6F6;
+	cursor: pointer;
+}
+
+
+
+
+/**/
+
+.mfepOuter {
+	position: absolute;
+	z-index: 9999;
+	background: url(mfep_bg.png);
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 8px, rgba(0, 0, 0, 0.24) 0px 0px 4px;
+	border: 2px solid rgb(3, 169, 244);
+	margin-top: -1px;
+	margin-left: -1px;
+	border-radius: 2px;
+}
+
+.mfepdic {
+	position: fixed;
+	z-index: 99999;
+	background: #fafafa;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 31px;
+	pointer-events: none;
+}
+
+.mfepdic .mfepdtim {
+	text-transform: lowercase;
+	line-height: 32px;
+	padding: 0 16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.mfepdic .mfepdtim a,
+.mfepdic .mfepdtim i {
+	font-weight: 500;
+	color: rgba(0,0,0,0.38); 
+}
+
+.mfepdic .mfepdtim a:last-child {
+	color: #9E9E9E;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-weight: 500;
+}
+
+.mfepdic .mfepdtim a:only-child {
+	background: none;
+}
+
+.mfepdic .mfepdtim span {
+	vertical-align: -webkit-baseline-middle;
+	margin: 0 8px;
+}
+
+.mfepdic .mfepdtim span i {
+	font-size: 20px;
+}
+
+/* Mode toggle */
+
+.mfEpModeTgle {
+	height: 31px;
+	background: none;
+	width: 180px;
+	position: relative;
+	border-right: 1px solid #eee;
+	font-family: 'Roboto', sans-serif;
+	pointer-events: all;
+}
+
+.mfEpModeTgle {
+	float: left;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 16px;
+}
+
+.mfEpModeTgle input[type=checkbox] {
+	display: none;
+}
+
+.mfEpModeTgle label {
+	cursor: pointer;
+}
+
+.mfEpModeTgle label .text {
+	padding-left: 50px;
+	color: rgba(0, 0, 0, 0.36);
+	top: 5px;
+	font-weight: 500;
+	position: absolute;
+}
+
+.mfEpModeTgle label .text:after {
+	content: "Interactive mode"
+}
+
+.mfEpModeTgle label .slot {
+	position: absolute;
+	top: 8px;
+	left: 2px;
+	width: 32px;
+	height: 14px;
+	background-color: #999;
+	border-radius: 13px;
+	transition: all 0.3s ease-in-out;
+}
+
+.mfEpModeTgle label .lever {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #e7e7e7;
+	border-radius: 20px;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+	left: 0;
+	top: 5px;
+}
+
+.mfEpModeTgle input[type=checkbox]:checked ~ label .slot {
+	background-color: rgba(255, 152, 0, 0.5);
+}
+
+.mfEpModeTgle input[type=checkbox]:checked ~ label .lever {
+	background-color: #FF9800;
+	left: 17px;
+}
+
+.mfEpModeTgle input[type=checkbox]:checked ~ label .text {
+	color: rgba(0, 0, 0, 0.64);
+}
+
+.mfEpModeTgle input[type=checkbox]:checked ~ label .text:after {
+	content: "Selection mode";
+}
+
+.mfepInteractModeInfoText {
+	line-height: 32px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.36);
+	font-weight: 500;
+	text-align: center;
+	margin: 0 auto;
+	height: 32px;
+	width: 100%;
+	max-width: 960px;
+}
